@@ -1,0 +1,12 @@
+const express=require('express')
+const router=express.Router()
+const classify_hander=require('../router_hander/classify')
+router.post('/addclassify',classify_hander.addclassify_hander)
+router.get('/getclassify',classify_hander.getclassify_hander)
+router.get('/deleteclassify',classify_hander.deleteclassify_hander)
+router.post('/getRecommended',classify_hander.getRecommended_hander)
+router.get('/allclassifynovals',classify_hander.allclassifynovals_hander)
+router.get('/updateRecommended',classify_hander.updateRecommended_hander)
+router.get('/underclassify',classify_hander.underclassify_hander)
+router.get('/updateclassifyname',classify_hander.updateclassifyname_hander)
+module.exports=router

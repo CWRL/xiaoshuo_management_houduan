@@ -1,0 +1,10 @@
+const express=require('express')
+const role_hander=require('../router_hander/role')
+const router=express.Router()
+router.post('/addrole',role_hander.addrole_hander)
+router.get('/rolevalue',role_hander.rolevalue_hander)
+router.get('/changestatus',role_hander.changestatus_hander)
+router.get('/getallroles',role_hander.getallroles_hander)
+router.post('/updaterule',role_hander.updaterule_hander)
+router.get('/delete',role_hander.delete_hander)
+module.exports=router

@@ -1,0 +1,12 @@
+const multer =require('multer')
+const path=require('path')
+const express=require('express')
+const content_hander=require('../router_hander/content')
+const router=express.Router()
+router.post('/addnovalcpaters',content_hander.addnovalcapters_hander)
+router.post('/addnoval',content_hander.addnoval_hander)
+router.get('/getnovals',content_hander.getnovals_hander)
+router.post('/updatenoval',content_hander.updatenoval_hander)
+router.get('/getcapters',content_hander.getcapters_hander)
+router.get('/getsomecapters',content_hander.getsomecapters_hander)
+module.exports=router
